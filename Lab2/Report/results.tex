@@ -1,0 +1,112 @@
+\subsection {Выборочные коэффициенты корреляции}
+	\begin{table}[H]
+		\label{tabular:timesandtenses}
+		\begin{center}
+			\input{CharacteristicTables/20generate_sample}
+		\end{center}
+		\caption{Двумерное нормальное распределение, $n=20$}
+	\end{table}
+
+	\begin{table}[H]
+		\label{tabular:timesandtenses}
+		\begin{center}
+			\input{CharacteristicTables/60generate_sample}
+		\end{center}
+		\caption{Двумерное нормальное распределение, $n=60$}
+	\end{table}
+
+	\begin{table}[H]
+		\label{tabular:timesandtenses}
+		\begin{center}
+			\input{CharacteristicTables/100generate_sample}
+		\end{center}
+		\caption{Двумерное нормальное распределение, $n=100$}
+	\end{table}
+
+	\begin{table}[H]
+		\label{tabular:timesandtenses}
+		\begin{center}
+			\input{CharacteristicTables/20generate_mix_sample}
+			\input{CharacteristicTables/60generate_mix_sample}
+			\input{CharacteristicTables/100generate_mix_sample}
+		\end{center}
+		\caption{Смесь нормальных распределений}
+	\end{table}
+
+\subsection {Эллипсы рассеивания}
+	\begin{figure}[H]
+		\center{\includegraphics[width=1\linewidth]{20ellipse.png}}
+		\caption{Двумерное нормальное распределение, n=20}
+		\label{ris:image}
+	\end{figure}
+
+	\begin{figure}[H]
+		\center{\includegraphics[width=1\linewidth]{60ellipse.png}}
+		\caption{Двумерное нормальное распределение, n=60}
+		\label{ris:image}
+	\end{figure}
+
+	\begin{figure}[H]
+		\center{\includegraphics[width=1\linewidth]{100ellipse.png}}
+		\caption{Двумерное нормальное распределение, n=100}
+		\label{ris:image}
+	\end{figure}
+
+\subsection {Оценки коэффициентов линейной регрессии}
+	\subsubsection {Выборка без возмущений}
+		\begin{itemize}
+			\item {Критерий наимеших квадратов:\\ $$\hat a \approx 1.868, \; \hat b \approx 1.738$$} 
+			\item {Критерий наименьших модулей:\\ $$\hat a \approx 2.311, \; \hat b \approx 1.614$$}
+		\end{itemize}
+
+		\begin{figure}[H]
+			\center{\includegraphics[width=0.5\linewidth]{default.png}}
+			\caption{Выборка без возмущений}
+			\label{ris:image}
+		\end{figure}
+	
+	\subsubsection{Выборка с возмущениями}
+		\begin{itemize}
+			\item {Критерий наимеших квадратов:\\ $$\hat a \approx 1.786, \; \hat b \approx 0.052$$} 
+			\item {Критерий наименьших модулей:\\ $$\hat a \approx 1.346, \; \hat b \approx 1.445$$}
+		\end{itemize}
+
+		\begin{figure}[H]
+			\center{\includegraphics[width=0.5\linewidth]{default_with_distrubance.png}}
+			\caption{Выборка с возмущениями}
+			\label{ris:image}
+		\end{figure}
+
+\subsection{Проверка гипотезы о законе распределения генеральной совокупности. Метод хи-квадрат}
+	\input{chi_tables/normal}
+	\caption{Вычисление $\chi^2_B$ при проверке гипотезы $H_0$ о нормальном законе $N(x, \hat\mu, \hat\sigma)$}
+	\end{table}
+	Исследование на чувствительность:\\
+	Рассмотрим гипотезу $H_0^*$, что выборка распределена согласно закону $Laplace(x, \hat\mu, \frac{\hat\sigma}{\sqrt{2}})$\\
+	\input{chi_tables/laplace}
+	\caption{Вычисление $\chi^2_B$ при проверке гипотезы $H_0^*$ о $Laplace(x, \hat\mu, \frac{\hat\sigma}{\sqrt{2}})$}
+	\end{table}
+	Видим, что $\chi^2_B<\chi^2_{0.95}$, следовательно гипотеза о нормальности принимается.\\
+	Рассмотрим гипотезу $H_0^*$, что выборка распределена согласно равномерному распределению$(x, \hat\mu, \sigma)$\\
+	\input{chi_tables/uniform}
+	\caption{Вычисление $\chi^2_B$ при проверке гипотезы $H_0^*$ о равномерном распределении}
+	\end{table}
+	Видим, что $\chi^2_B<\chi^2_{0.95}$, следовательно гипотеза о нормальности принимается.
+
+\subsection {Доверительные интервалы для параметров нормального распределения}
+	\begin{table}[H]
+		\label{tabular:timesandtenses}
+		\begin{center}
+			\input{Confidence intervals/classic}
+		\end{center}
+		\caption{Доверительные интервалы для параметров нормального распределения}
+	\end{table}
+
+\subsection {Доверительные интервалы для параметров произвольного распределения. Асимптотический подход}
+	\begin{table}[H]
+		\label{tabular:timesandtenses}
+		\begin{center}
+			\input{Confidence intervals/asymptotic}
+		\end{center}
+		\caption{Доверительные интервалы для параметров произвольного распределения. Асимптотический подход}
+	\end{table}
